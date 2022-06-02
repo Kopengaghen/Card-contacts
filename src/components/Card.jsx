@@ -4,18 +4,18 @@ import Details from "./Details";
 
 const Card = (props) => {
     return (
-        <div>
-            <h1>My Contacts</h1>
-            <div>
-                <div>
-                    <h2>{props.name}</h2>
-                    <Avatar img={props.img} />
-                    <Details tel={props.tel} />
-                    <Details email={props.email} />
-                </div>
+        <div className="card">
+            <div className="top">
+                <h2 className="name">{props.name}</h2>
+                <Avatar img={props.img}/>
+            </div>
+            <div className="bottom">
+                <Details detailInfo={props.tel}/>
+                <Details detailInfo={props.email}/>
             </div>
         </div>
     );
 };
 
 export default Card;
+
